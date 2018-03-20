@@ -1,0 +1,18 @@
+.box {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid black; }
+
+.test {
+  width: 2.7rem;
+  height: 2.7rem;
+  border: 1px solid wheat; }
+  .test p.tro {
+    font-size: 0.24rem; }
+  .test img {
+    width: 1.6rem;
+    height: 1.6rem; }
+
+/*# sourceMappingURL=base.css.map */

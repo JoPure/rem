@@ -1,0 +1,32 @@
+@function pr($px, $base-font-size: 50px) {
+  @if (unitless($px)) {
+    //@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+    @return pr($px + 0px); // That may fail.
+  } @else if (unit($px) == rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@mixin wh($w) {
+  width: $w;
+  height: $w;
+}
+
+.box {
+  overflow: hidden;
+  margin: 0 auto;
+  @include wh(pr(350));
+  border: 1px solid black;
+}
+
+.test {
+  @include wh(pr(135));
+  border: 1px solid wheat;
+  p.tro{
+    font-size: pr(12);
+  }
+  img {
+    @include wh(pr(80));
+  }
+}
